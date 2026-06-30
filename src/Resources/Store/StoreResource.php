@@ -2,8 +2,8 @@
 
 namespace JeffersonGoncalves\FilamentCommerce\Store\Resources\Store;
 
+use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Schemas\Schema;
 use Filament\Tables\Table;
 use JeffersonGoncalves\Commerce\Store\Models\Store;
 use JeffersonGoncalves\FilamentCommerce\Store\CommerceStorePlugin;
@@ -26,9 +26,9 @@ class StoreResource extends Resource
         }
     }
 
-    public static function form(Schema $schema): Schema
+    public static function form(Form $form): Form
     {
-        return StoreForm::configure($schema);
+        return StoreForm::configure($form);
     }
 
     public static function table(Table $table): Table
